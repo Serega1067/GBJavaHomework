@@ -27,19 +27,14 @@ public class GBJavaHomeworkSem1 {
         short n = 0;
         n = findLenByteNum(i);
         System.out.println("Номер старшего бита: " + n);
-        System.out.println(Integer.toBinaryString(i).length());
 
         // 3. Найти все кратные n числа большие i и сохранить в 
         // массив m1.
         int count1 = 0;
         int lenArrays[] = new int[2];
         lenArrays = countLenArrayMaxValue(i, n);
-        System.out.println(lenArrays[0]);
-        System.out.println(Short.MIN_VALUE);
-        System.out.println(lenArrays[1]);
-        System.out.println(Short.MAX_VALUE);
         int[] m1 = new int[lenArrays[0]];
-        for (int j = i; j < lenArrays[0]; j++) {
+        for (int j = i; j < Short.MAX_VALUE; j++) {
             if (j % n == 0) {
                 m1[count1] = j;
                 count1++;
