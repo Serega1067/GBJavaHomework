@@ -48,6 +48,9 @@ public class GBJavaHomeworkSem3 {
         System.out.println(elem);
 
         // Задача 5.
+        System.out.println(newElem("green!", 
+                                   "light green!", 
+                                   resultList));
 
         // Задача 6.
         resultList.remove(2);
@@ -55,7 +58,7 @@ public class GBJavaHomeworkSem3 {
 
         // Задача 7.
         String resultFind = "";
-        String findElem = "green!";
+        String findElem = "red!";
         for (Object o : resultList) {
             if (o.equals(findElem)) {
                 resultFind = "Yes";
@@ -109,5 +112,24 @@ public class GBJavaHomeworkSem3 {
             newArrList.add(temp);
         }
         return newArrList;
+    }
+
+    /**
+     * Обновление определенного элемента массива по заданному 
+     * элементу
+     * @param oldElem
+     * @param newElem
+     * @param arrList
+     * @return
+     */
+    static ArrayList<String> newElem(String oldElem, 
+                                     String newElem, 
+                                     ArrayList<String> arrList) {
+        for (int i = 0; i < arrList.size(); i++) {
+            if (arrList.get(i).equals(oldElem)) {
+                arrList.set(i, newElem);
+            }
+        }
+        return arrList;
     }
 }
