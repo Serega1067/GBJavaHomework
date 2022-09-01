@@ -2,6 +2,7 @@ package GBJavaSeminars.GBJavaHomeworkSem3;
 
 import java.util.ArrayList;
 import java.util.Collection;
+import java.util.Arrays;
 
 /**
  * Семинар 3. Задачи.
@@ -67,6 +68,8 @@ public class GBJavaHomeworkSem3 {
         System.out.println(resultFind);
 
         // Задача 8.
+        resultList.sort(null);
+        System.out.println(resultList);
 
         // Задача 9.
         ArrayList<String> newResultList = new ArrayList<String>();
